@@ -7,3 +7,10 @@ var randomDiceImagePlayer2 = "./images/dice"+ randomvar2 +".png";
 document.querySelectorAll("img")[0].setAttribute("src", randomDiceImagePlayer1);  //changeing player 1 dice
 document.querySelectorAll("img")[1].setAttribute("src", randomDiceImagePlayer2);  //changeing player 1 dice
 
+if (randomvar1 === randomvar2) {
+    document.querySelector("h1").textContent = "Draw!";
+} else if (randomvar1 > randomvar2) {
+    document.querySelector("h1").textContent = "🏁 Player1 Wins!";
+} else {
+    document.querySelector("h1").textContent = "Player2 Wins! 🏁";
+}
